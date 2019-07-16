@@ -15,6 +15,7 @@ import java.io.IOException;
 public class BeetlConfig {
 
 
+
     /**
      * beetl的配置
      */
