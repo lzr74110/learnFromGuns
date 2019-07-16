@@ -13,6 +13,7 @@ public class HelloWorld {
         modelAndView.addObject("email", "apk2sf@163.com");
         modelAndView.setViewName("index");
         return modelAndView;
+        
     }
 
 }
