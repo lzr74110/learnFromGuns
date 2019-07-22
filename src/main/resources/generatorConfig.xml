@@ -2,7 +2,6 @@
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
 <generatorConfiguration>
     <classPathEntry location="D:\Repository\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar"/>
     <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
@@ -25,6 +24,8 @@
                 connectionURL="jdbc:mysql://localhost:3306/guns_learn?characterEncoding=UTF-8"
                 userId="root"
                 password="123456">
+            <!--使用mysql connnectter8 以上的需要添加这么一句 ，不然会查的别的库里的同名表-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!-- 生成实体类地址 -->
         <javaModelGenerator targetPackage="com.lzr.learnGuns.vo" targetProject="src/main/java"/>

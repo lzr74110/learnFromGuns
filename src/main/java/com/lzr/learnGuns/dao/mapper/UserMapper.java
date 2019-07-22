@@ -1,23 +1,20 @@
 package com.lzr.learnGuns.dao.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lzr.learnGuns.vo.User;
 import com.lzr.learnGuns.vo.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 
-public interface UserMapper extends Mapper<User> {
+public interface UserMapper extends Mapper<User>, BaseMapper<User> {
     long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);
 
-    List<User> selectByExampleWithBLOBs(UserExample example);
-
     List<User> selectByExample(UserExample example);
 
     int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
-
-    int updateByExampleWithBLOBs(@Param("record") User record, @Param("example") UserExample example);
 
     int updateByExample(@Param("record") User record, @Param("example") UserExample example);
 }
